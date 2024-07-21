@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+}
+.main_page {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.list {
+  list-style: none;
+  /* size: 100px; */
+}
+.eachList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: pink;
+  margin-bottom: 5px;
+  border: 50px;
+}
+.delete_button {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.top_heading {
+  display: flex;
+  justify-content: center;
+}
+.contact_icon {
+  color: black;
+}
+.form input {
+  border-radius: 5px;
+  margin: 7px;
+  padding: 7px;
+}
+.form button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 7px;
+  padding: 9px;
+  background-color: rgb(101, 172, 235);
+}
+.form button:hover {
+  background-color: antiquewhite;
+}

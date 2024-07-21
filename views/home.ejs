@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="top_heading">
+        <h1 class="contact_heading">
+          <img
+            class="contact_icon"
+            src="images/contact-book.png"
+            height="28px"
+            width="28px"
+          />Contact Lists
+        </h1>
+      </div>
+
+      <ul class="list">
+        <% for(let i of contact_list) {%>
+        <li class="eachList">
+          <div>
+            <p><%=i.name%></p>
+            <p><%=i.phone%></p>
+          </div>
+
+          <div>
+            <a href="/delete-contact/?id=<%=i._id%>"
+              ><button class="delete_button">Delete</button></a
+            >
+          </div>
+        </li>
+        <%} %>
+      </ul>
+    </div>
+
+    <form action="/create-contact" method="post" class="form">
+      <input type="text" placeholder="Enter Name" name="name" />
+      <input type="number" placeholder="Enter phone number" name="phone" />
+      <button type="submit">Add contact</button>
+    </form>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+  </body>
+</html>
